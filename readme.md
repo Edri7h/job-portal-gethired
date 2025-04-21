@@ -23,4 +23,4 @@ Clone this repository and install the dependencies:
 ```bash
 git clone https://github.com/Edri7h/job-portal-gethired.git
 cd GETHIRED
-npm instal
+npm install
