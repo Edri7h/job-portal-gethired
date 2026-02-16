@@ -11,7 +11,7 @@ import { Loader2 } from 'lucide-react';
 export default function SignupForm() {
   const navigate = useNavigate()
   const [userType, setUserType] = useState('student');
- 
+
 
   const [fieldData, setfieldData] = useState({
     fullname: "",
@@ -133,7 +133,7 @@ export default function SignupForm() {
               <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
                 Password
               </label>
-              <input
+              <input 
                 value={fieldData.password}
                 name='password'
                 onChange={fieldDataChangeHandler}
