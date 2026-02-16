@@ -15,7 +15,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: [
+      "https://job-portal-gethired.vercel.app",  
+    'http://localhost:5173',
+],
     credentials: true
 }
 app.use(cors(corsOptions))
@@ -30,7 +33,9 @@ app.use("/api/v1/job",jobRoute)
 app.use("/api/v1/application",applicationRoute)
 // app.use("/api/v1/")
 
-
+app.get("/", (req, res) => {
+    res.send("Welcome to GetHired API")
+})
 
 
 connectDB().then(() => {
